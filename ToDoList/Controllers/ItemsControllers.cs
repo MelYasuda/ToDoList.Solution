@@ -25,8 +25,6 @@ namespace ToDoList.Controllers
         public ActionResult Create()
         {
             Item newItem = new Item(Request.Form["new-item"]);
-
-            newItem.Save();
             List<Item> tempList = Item.GetAll();
 
             // List<Item> allItems = new List<Item> {newItem};
